@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coffee Bliss</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="logo">☕ <span>Coffee</span> Bliss</div>
+    <ul>
+        <li><a href="#home" class="tab-link" data-tab="home" onclick="return openTab('home')">Home</a></li>
+        <li><a href="#about" class="tab-link" data-tab="about" onclick="return openTab('about')">About</a></li>
+        <li><a href="#menu" class="tab-link" data-tab="menu" onclick="return openTab('menu')">Menu</a></li>
+        <li><a href="#order" class="tab-link" data-tab="order" onclick="return openTab('order')">Order</a></li>
+        <li><a href="#reviews" class="tab-link" data-tab="reviews" onclick="return openTab('reviews')">Reviews</a></li>
+        <li><a href="#contact" class="tab-link" data-tab="contact" onclick="return openTab('contact')">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- ===================== HOME ===================== -->
+<div id="home-section" class="tab-section">
+<section class="hero">
+    <div class="hero-content">
+        <h1>Fresh Coffee Every Morning</h1>
+        <p>Enjoy Premium Coffee & Delicious Snacks</p>
+        <button class="order-btn" onclick="goOrder()">Order Now ☕</button>
+    </div>
+</section>
+
+<section class="features">
+    <div class="box">
+        <h2>☕ Premium Beans</h2>
+        <p>Freshly roasted coffee beans for the perfect taste.</p>
+    </div>
+    <div class="box">
+        <h2>🍰 Fresh Snacks</h2>
+        <p>Delicious cakes and desserts made daily.</p>
+    </div>
+    <div class="box">
+        <h2>❤️ Best Service</h2>
+        <p>A relaxing place for friends and family.</p>
+    </div>
+</section>
+</div>
+
+<!-- ===================== ABOUT ===================== -->
+<div id="about-section" class="tab-section">
+<section class="about-section">
+    <h1 class="title">About Our Cafe</h1>
+
+    <div class="about">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80">
+
+        <div class="about-text">
+            <h2>Welcome To Coffee Bliss</h2>
+            <p>
+                Coffee Bliss is the perfect place to relax with friends and family.
+                We serve freshly brewed coffee prepared from premium quality beans.
+                Every cup is carefully crafted to give you a memorable experience.
+                Our mission is to create a warm atmosphere where every coffee lover feels at home.
+            </p>
+            <button onclick="learnMore()">Discover More ☕</button>
+        </div>
+    </div>
+</section>
+
+<section class="values">
+    <div class="card">
+        <h3>☕ Premium Beans</h3>
+        <p>Selected coffee beans from the finest farms.</p>
+    </div>
+    <div class="card">
+        <h3>❤️ Passion</h3>
+        <p>Every drink is prepared with love and care.</p>
+    </div>
+    <div class="card">
+        <h3>🌟 Quality Service</h3>
+        <p>A peaceful place with friendly service.</p>
+    </div>
+</section>
+</div>
+
+<!-- ===================== MENU ===================== -->
+<div id="menu-section" class="tab-section">
+<h1 class="title">
+    Our Premium Menu ☕
+    <p>Fresh Coffee • Delicious Desserts • Tasty Snacks</p>
+</h1>
+
+<div class="menu">
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=700">
+        <h3>Cappuccino ☕</h3>
+        <p>Italian espresso with creamy milk foam.</p>
+        <div class="price">₹180</div>
+        <button onclick="orderItem('Cappuccino')">Order Now</button> 
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=700">
+        <h3>Latte ☕</h3>
+        <p>Smooth coffee with rich steamed milk.</p>
+        <div class="price">₹160</div>
+        <button onclick="orderItem('Latte')">Order Now</button>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=700">
+        <h3>Espresso ☕</h3>
+        <p>Strong Italian coffee with deep aroma.</p>
+        <div class="price">₹140</div>
+        <button onclick="orderItem('Espresso')">Order Now</button>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=700">
+        <h3>Cold Coffee 🧊</h3>
+        <p>Chilled creamy coffee refreshment.</p>
+        <div class="price">₹200</div>
+        <button onclick="orderItem('Cold Coffee')">Order Now</button>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=700">
+        <h3>Chocolate Cake 🍰</h3>
+        <p>Soft chocolate cake with premium taste.</p>
+        <div class="price">₹220</div>
+        <button onclick="orderItem('Chocolate Cake')">Order Now</button>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1564355808539-22fda35bed7e?w=700">
+        <h3>Brownie 🍫</h3>
+        <p>Fresh baked chocolate brownie.</p>
+        <div class="price">₹150</div>
+        <button onclick="orderItem('Brownie')">Order Now</button>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1553909489-cd47e0907980?w=700">
+        <h3>Club Sandwich 🥪</h3>
+        <p>Fresh sandwich with delicious fillings.</p>
+        <div class="price">₹180</div>
+        <button onclick="orderItem('Club Sandwich')">Order Now</button>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=700">
+        <h3>Donut 🍩</h3>
+        <p>Soft sweet glazed donut.</p>
+        <div class="price">₹120</div>
+        <button onclick="orderItem('Donut')">Order Now</button>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?w=700">
+        <h3>Green Tea 🍵</h3>
+        <p>Healthy refreshing herbal tea.</p>
+        <div class="price">₹100</div>
+        <button onclick="orderItem('Green Tea')">Order Now</button>
+    </div>
+
+</div>
+</div>
+
+<!-- ===================== ORDER ===================== -->
+<!-- ===================== ORDER ===================== -->
+
+<div id="order-section" class="tab-section">
+
+    <section>
+
+        <h1 class="title">Place Your Order ☕</h1>
+
+        <div class="order-box">
+
+            <h2>Coffee Bliss Order</h2>
+
+
+            <!-- CUSTOMER NAME -->
+
+            <label for="name">Customer Name</label>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+            >
+
+
+            <!-- PHONE NUMBER -->
+
+            <label for="phone">Phone Number</label>
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Enter phone number"
+            >
+
+
+            <!-- SELECT ITEM -->
+
+           
+<label for="item">Select Item</label>
+
+            <select
+                id="item"
+                onchange="calculateTotal()"
+            >
+
+                <option value="180" data-product-id="1">
+                    Cappuccino ☕ - ₹180
+                </option>
+
+                <option value="160" data-product-id="2">
+                    Latte ☕ - ₹160
+                </option>
+
+                <option value="140" data-product-id="3">
+                    Espresso ☕ - ₹140
+                </option>
+
+                <option value="200" data-product-id="4">
+                    Cold Coffee 🧊 - ₹200
+                </option>
+
+                <option value="220" data-product-id="5">
+                    Chocolate Cake 🍰 - ₹220
+                </option>
+
+                <option value="150" data-product-id="6">
+                    Brownie 🍫 - ₹150
+                </option>
+
+                <option value="180" data-product-id="7">
+                    Club Sandwich 🥪 - ₹180
+                </option>
+
+                <option value="120" data-product-id="8">
+                    Donut 🍩 - ₹120
+                </option>
+
+                <option value="100" data-product-id="9">
+                    Green Tea 🍵 - ₹100
+                </option>
+
+            </select>
+
+
+
+            <!-- QUANTITY -->
+
+            <label for="quantity">Quantity</label>
+
+            <input
+                type="number"
+                id="quantity"
+                value="1"
+                min="1"
+                oninput="calculateTotal()"
+            >
+
+
+            <!-- SELECTED ITEM -->
+
+            <div class="summary">
+
+                Selected Item:
+
+                <span id="selected">
+                    Cappuccino ☕ - ₹180
+                </span>
+
+            </div>
+
+
+            <!-- TOTAL -->
+
+            <div class="total">
+
+                Total ₹<span id="total">180</span>
+
+            </div>
+
+
+            <!-- PLACE ORDER -->
+
+            <button onclick="placeOrder()">
+                Place Order ☕
+            </button>
+
+        </div>
+
+    </section>
+
+</div>
+<!-- ===================== REVIEWS ===================== -->
+<div id="reviews-section" class="tab-section">
+<section>
+    <h1 class="title">Customer Reviews ⭐</h1>
+
+    <div class="reviews" id="reviewBox">
+
+        <div class="review">
+            <img class="profile" src="https://randomuser.me/api/portraits/men/32.jpg">
+            <h2>Arun</h2>
+            <h3>⭐⭐⭐⭐⭐</h3>
+            <p>"Best coffee in town! Amazing taste and quality."</p>
+        </div>
+
+        <div class="review">
+            <img class="profile" src="https://randomuser.me/api/portraits/women/44.jpg">
+            <h2>Priya</h2>
+            <h3>⭐⭐⭐⭐⭐</h3>
+            <p>"Beautiful atmosphere and friendly service."</p>
+        </div>
+
+        <div class="review">
+            <img class="profile" src="https://randomuser.me/api/portraits/men/65.jpg">
+            <h2>David</h2>
+            <h3>⭐⭐⭐⭐⭐</h3>
+            <p>"Highly recommended for coffee lovers."</p>
+        </div>
+
+    </div>
+
+    <div class="add-review">
+        <h2 style="color:#8b0000;text-align:center">Share Your Experience</h2>
+        <input id="customer" placeholder="Your Name">
+        <textarea id="message" placeholder="Your Review"></textarea>
+        <button onclick="addReview()">Submit Review</button>
+    </div>
+
+</section>
+</div>
+
+<!-- ===================== CONTACT ===================== -->
+<div id="contact-section" class="tab-section">
+<section class="contact">
+    <h1>Contact Us ☕</h1>
+
+    <div class="contact-container">
+        <div class="info">
+            <h2>📍 Address</h2>
+            <p>123 Coffee Street,<br>Chennai, Tamil Nadu</p>
+        </div>
+
+        <div class="info">
+            <h2>📞 Phone</h2>
+            <p>+91 9876543210</p>
+        </div>
+
+        <div class="info">
+            <h2>✉ Email</h2>
+            <p>coffeebliss@gmail.com</p>
+        </div>
+    </div>
+
+    <div class="form-box">
+        <h2 style="color:#8b0000;margin-bottom:20px">Send Message</h2>
+
+        <input type="text" id="cname" placeholder="Your Name">
+        <input type="email" id="cemail" placeholder="Your Email">
+        <textarea id="cmessage" placeholder="Your Message"></textarea>
+
+        <button onclick="sendMessage()">Send Message</button>
+    </div>
+
+</section>
+</div>
+
+<footer>
+    © 2026 <span>Coffee Bliss</span> | All Rights Reserved
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
